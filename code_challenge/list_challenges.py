@@ -48,4 +48,11 @@
 # Output: [0,1]
 # 
 def two_sum(nums, target):
-    return []
+    counterB = 1
+    for i in nums:
+        for b in nums[1:]:
+            if i + b == target:
+                return [nums.index(i), counterB]
+            else:
+                counterB += 1
+        counterB = 1
